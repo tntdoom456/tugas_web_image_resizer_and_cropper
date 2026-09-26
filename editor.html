@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikasi Image Cropper - Editor</title>
+</head>
+<body>
+    <header>
+        <h1>Ruang Kerja Editor</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="editor.html">Editor</a></li>
+                <li><a href="detail.html">Simpan & Detail Gambar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Langkah 1: Pengaturan Pemotongan</h2>
+            <form action="detail.html" method="GET">
+                <p>
+                    <label for="imageLoader">Pilih Gambar dari Komputer:</label>
+                    <input type="file" id="imageLoader" name="imageLoader" accept="image/*">
+                </p>
+                
+                <p>
+                    <label for="targetW">Lebar Potongan (px):</label>
+                    <input type="number" id="targetW" name="targetW" value="800">
+                </p>
+                
+                <p>
+                    <label for="targetH">Tinggi Potongan (px):</label>
+                    <input type="number" id="targetH" name="targetH" value="600">
+                </p>
+
+                <button type="submit">Proses Pemotongan Gambar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Langkah 2: Pratinjau Gambar</h2>
+            <article>
+                <h3>Gambar Asli</h3>
+                <img src="gambar-asli.jpeg" alt="ini gambar asli" width="500">
+            </article>
+
+            <article>
+                <h3>Hasil Potongan (Cropped)</h3>
+                <img src="gambar-hasil.png" alt="ini gambar yang dipotong" width="400">
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ini web html</p>
+    </footer>
+</body>
+</html>
