@@ -2,56 +2,59 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Aplikasi Image Cropper - Editor</title>
+    <title>Imagecrop - Editor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Ruang Kerja Editor</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="editor.html">Editor</a></li>
-                <li><a href="detail.html">Simpan & Detail Gambar</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Ruang Kerja Editor</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="editor.html" class="active">Editor</a></li>
+                    <li><a href="detail.html">Simpan & Detail Gambar</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
+    <main class="container">
+        <section class="card form-section">
             <h2>Langkah 1: Pengaturan Pemotongan</h2>
             <form action="detail.html" method="GET">
-                <p>
+                <div class="form-group">
                     <label for="imageLoader">Pilih Gambar dari Komputer:</label>
                     <input type="file" id="imageLoader" name="imageLoader" accept="image/*">
-                </p>
+                </div>
                 
-                <p>
+                <div class="form-group">
                     <label for="targetW">Lebar Potongan (px):</label>
                     <input type="number" id="targetW" name="targetW" value="800">
-                </p>
+                </div>
                 
-                <p>
+                <div class="form-group">
                     <label for="targetH">Tinggi Potongan (px):</label>
                     <input type="number" id="targetH" name="targetH" value="600">
-                </p>
+                </div>
 
-                <button type="submit">Proses Pemotongan Gambar</button>
+                <button type="submit" class="btn-primary">Proses Pemotongan Gambar</button>
             </form>
         </section>
 
-        <hr>
-
-        <section>
+        <section class="card">
             <h2>Langkah 2: Pratinjau Gambar</h2>
-            <article>
-                <h3>Gambar Asli</h3>
-                <img src="gambar-asli.jpeg" alt="ini gambar asli" width="500">
-            </article>
+            <div class="preview-grid">
+                <article class="preview-box">
+                    <h3>Gambar Asli</h3>
+                    <img src="gambar-asli.jpeg" alt="ini gambar asli">
+                </article>
 
-            <article>
-                <h3>Hasil Potongan (Cropped)</h3>
-                <img src="gambar-hasil.png" alt="ini gambar yang dipotong" width="400">
-            </article>
+                <article class="preview-box">
+                    <h3>Hasil Potongan (Cropped)</h3>
+                    <img src="gambar-hasil.png" alt="ini gambar yang dipotong">
+                </article>
+            </div>
         </section>
     </main>
 

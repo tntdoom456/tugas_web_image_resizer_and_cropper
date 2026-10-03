@@ -2,46 +2,55 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Aplikasi Editor Gambar - Detail</title>
+    <title>Imagecrop - Detail Gambar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Detail Aset Gambar</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Beranda (Daftar Gambar)</a></li>
-                <li><a href="editor.html">Editor Pemotong Gambar</a></li>
-                <li><a href="detail.html">Detail Gambar</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Detail Aset Gambar</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="editor.html">Editor</a></li>
+                    <li><a href="detail.html" class="active">Detail Gambar</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <article>
-            <header>
-                <h2>hasrusnya foto.png</h2>
-                <p>ini foto</p>
+    <main class="container">
+        <article class="card">
+            <header class="detail-header">
+                <h2>harusnya-foto.png</h2>
+                <span class="badge">Siap Disimpan</span>
             </header>
             
-            <section>
-                <img src="foto-profil-karyawan.png" alt="ini foto tapi blm ada fotonya" width="300">
+            <section class="detail-content">
+                <div class="image-wrapper">
+                    <img src="foto-profil-karyawan.png" alt="ini foto tapi blm ada fotonya">
+                </div>
                 
-                <h3>Metadata</h3>
-                <ul>
-                    <li><strong>Resolusi:</strong> 800 x 800 Piksel</li>
-                    <li><strong>Ukuran File:</strong> 150 KB(kayaknya)</li>
-                    <li><strong>Dibuat Pada:</strong> 26 September 2026</li>
-                </ul>
+                <div class="metadata-wrapper">
+                    <h3>Metadata</h3>
+                    <ul class="meta-list">
+                        <li><strong>Resolusi:</strong> 800 x 800 Piksel</li>
+                        <li><strong>Ukuran File:</strong> 150 KB</li>
+                        <li><strong>Dibuat Pada:</strong> 26 September 2026</li>
+                    </ul>
+                </div>
             </section>
             
-            <section>
+            <hr>
+
+            <section class="form-section">
                 <h3>Catatan Revisi Gambar</h3>
                 <form action="#" method="POST">
-                    <p>
-                        <label for="catatanAdmin">Tambahkan Catatan:</label><br>
-                        <textarea id="catatanAdmin" name="catatanAdmin" rows="4" cols="50" placeholder="Tulis catatan mengenai aset ini..."></textarea>
-                    </p>
-                    <button type="submit">Simpan Catatan</button>
+                    <div class="form-group">
+                        <label for="catatanAdmin">Tambahkan Catatan:</label>
+                        <textarea id="catatanAdmin" name="catatanAdmin" rows="4" placeholder="Tulis catatan mengenai aset ini..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Simpan Catatan</button>
                 </form>
             </section>
         </article>
