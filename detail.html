@@ -2,62 +2,79 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Imagecrop - Detail Gambar</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ImageCrop - Detail Gambar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="header-container">
-            <h1>Detail Aset Gambar</h1>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="editor.html">Editor</a></li>
-                    <li><a href="detail.html" class="active">Detail Gambar</a></li>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">ImageCrop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="editor.html">Ruang Kerja</a></li>
+                    <li class="nav-item"><a class="nav-link active text-primary fw-bold" href="detail.html">Detail Gambar</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
-
+    </nav>
     <main class="container">
-        <article class="card">
-            <header class="detail-header">
-                <h2>harusnya-foto.png</h2>
-                <span class="badge">Siap Disimpan</span>
-            </header>
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+                <h4 class="mb-0 fw-bold">Ini foto.png</h4>
+                <span class="badge bg-success px-3 py-2">Siap Disimpan</span>
+            </div>
             
-            <section class="detail-content">
-                <div class="image-wrapper">
-                    <img src="foto-profil-karyawan.png" alt="ini foto tapi blm ada fotonya">
-                </div>
-                
-                <div class="metadata-wrapper">
-                    <h3>Metadata</h3>
-                    <ul class="meta-list">
-                        <li><strong>Resolusi:</strong> 800 x 800 Piksel</li>
-                        <li><strong>Ukuran File:</strong> 150 KB</li>
-                        <li><strong>Dibuat Pada:</strong> 26 September 2026</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <hr>
-
-            <section class="form-section">
-                <h3>Catatan Revisi Gambar</h3>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="catatanAdmin">Tambahkan Catatan:</label>
-                        <textarea id="catatanAdmin" name="catatanAdmin" rows="4" placeholder="Tulis catatan mengenai aset ini..."></textarea>
+            <div class="card-body">
+                <div class="row g-4 align-items-center">
+                    <!-- Sisi Kiri: Gambar -->
+                    <div class="col-md-5 text-center">
+                        <img src="gambar-hasil.png" class="img-fluid rounded shadow-sm border p-1" alt="Ini foto">
                     </div>
-                    <button type="submit" class="btn-primary">Simpan Catatan</button>
-                </form>
-            </section>
-        </article>
+                    
+                    <!-- Sisi Kanan: Metadata & Form -->
+                    <div class="col-md-7">
+                        <h5 class="fw-bold mb-3">Informasi Metadata</h5>
+                        <!-- Bootstrap List Group -->
+                        <ul class="list-group mb-4">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Resolusi</span>
+                                <strong>800 x 800 Piksel</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Ukuran File</span>
+                                <strong>150 KB</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Dibuat Pada</span>
+                                <strong>26 September 2026</strong>
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="catatanAdmin" class="form-label fw-bold">Tambahkan Catatan Revisi</label>
+                                <textarea class="form-control" id="catatanAdmin" rows="3" placeholder="Tulis instruksi tambahan..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary w-100">Simpan Log Catatan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>Ini web html</p>
+    <footer class="text-center text-muted py-4 mt-4 border-top">
+        <small>Ini tugas </small>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
