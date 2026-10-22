@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ImageCrop - Detail Gambar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-light">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
@@ -18,7 +20,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="editor.html">Ruang Kerja</a></li>
-                    <li class="nav-item"><a class="nav-link active text-primary fw-bold" href="detail.html">Detail Gambar</a></li>
+                    <li class="nav-item"><a class="nav-link active text-primary fw-bold" href="detail.html">Detail
+                            Gambar</a></li>
                 </ul>
             </div>
         </div>
@@ -29,18 +32,15 @@
                 <h4 class="mb-0 fw-bold">Ini foto.png</h4>
                 <span class="badge bg-success px-3 py-2">Siap Disimpan</span>
             </div>
-            
+
             <div class="card-body">
                 <div class="row g-4 align-items-center">
-                    <!-- Sisi Kiri: Gambar -->
                     <div class="col-md-5 text-center">
                         <img src="gambar-hasil.png" class="img-fluid rounded shadow-sm border p-1" alt="Ini foto">
                     </div>
-                    
-                    <!-- Sisi Kanan: Metadata & Form -->
+
                     <div class="col-md-7">
                         <h5 class="fw-bold mb-3">Informasi Metadata</h5>
-                        <!-- Bootstrap List Group -->
                         <ul class="list-group mb-4">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <span>Resolusi</span>
@@ -58,13 +58,19 @@
 
                         <hr>
 
-                        <form action="#" method="POST">
-                            <div class="mb-3">
-                                <label for="catatanAdmin" class="form-label fw-bold">Tambahkan Catatan Revisi</label>
-                                <textarea class="form-control" id="catatanAdmin" rows="3" placeholder="Tulis instruksi tambahan..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-outline-primary w-100">Simpan Log Catatan</button>
-                        </form>
+                        <button id="btn-toggle-catatan" class="btn btn-outline-primary w-100 fw-bold mb-3">Tampilkan
+                            Form Catatan</button>
+                        <div id="form-catatan-container" style="display: none;">
+                            <form action="#" method="POST">
+                                <div class="mb-3">
+                                    <label for="catatanAdmin" class="form-label fw-bold">Tambahkan Catatan
+                                        Revisi</label>
+                                    <textarea class="form-control" id="catatanAdmin" rows="3"
+                                        placeholder="Tulis instruksi tambahan..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Simpan Log Catatan</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,7 +80,9 @@
     <footer class="text-center text-muted py-4 mt-4 border-top">
         <small>Ini tugas </small>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
